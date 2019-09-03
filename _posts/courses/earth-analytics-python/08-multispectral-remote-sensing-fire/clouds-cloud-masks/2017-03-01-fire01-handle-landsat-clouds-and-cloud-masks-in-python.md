@@ -116,6 +116,12 @@ data = et.data.get_data('cold-springs-fire')
 os.chdir(os.path.join(et.io.HOME, 'earth-analytics'))
 ```
 
+{:.output}
+    Downloading from https://ndownloader.figshare.com/files/10960109
+    Extracted output to /root/earth-analytics/data/cold-springs-fire/.
+
+
+
 Next, you will load the landsat bands that you worked with previously in your homework.
 
 
@@ -445,10 +451,11 @@ landsat_pre_cl_free = em.mask_pixels(
 {:.input}
 ```python
 # Plot the data
-ep.plot_bands(landsat_pre_cl_free[6], 
-              extent=landsat_extent, 
+ep.plot_bands(landsat_pre_cl_free[6],
+              extent=landsat_extent,
               cmap="Greys",
-              title="Landsat CIR Composite Image | 30 meters \n Post Cold Springs Fire \n July 8, 2016")
+              title="Landsat CIR Composite Image | 30 meters \n Post Cold Springs Fire \n July 8, 2016",
+              cbar=False)
 plt.show()
 ```
 
